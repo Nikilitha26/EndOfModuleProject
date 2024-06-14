@@ -1,7 +1,17 @@
+
+if (window.jQuery) {
+   
+} else {
+    
+    
+console.log('Error: jQuery is not loaded');
+}
+
 function renderCheckoutTable() {
     const checkoutContainer = document.getElementById('checkout-container');
     let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
-    let subtotal = 0; // Initialize subtotal
+    let subtotal = 0; 
+    // Initialize subtotal
 
     if (checkoutContainer && purchasedItems.length > 0) {
         let tableHTML = `
@@ -97,6 +107,7 @@ function removeItem(itemId) {
     localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
     renderCheckoutTable(); // Re-render the table to reflect the removal
 }
+ 
 
 // Call the render function on page load
 document.addEventListener('DOMContentLoaded', renderCheckoutTable);
