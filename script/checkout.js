@@ -11,7 +11,7 @@ function renderCheckoutTable() {
     const checkoutContainer = document.getElementById('checkout-container');
     let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
     let subtotal = 0; 
-    // Initialize subtotal
+    // Initializing subtotal
 
     if (checkoutContainer && purchasedItems.length > 0) {
         let tableHTML = `
@@ -28,10 +28,10 @@ function renderCheckoutTable() {
 
         purchasedItems.forEach(item => {
             let itemTotal = item.quantity * item.price;
-            subtotal += itemTotal; // Add to subtotal
+            subtotal += itemTotal; // Adding to subtotal
             tableHTML += `
                 <tr>
-                    <td>
+                    <td >
                         <img src="${item.image}" " class="checkout-item-image">
                     </td>
                     <td>${item.name}</td>
@@ -48,21 +48,41 @@ function renderCheckoutTable() {
             `;
         });
 
-        // Add the subtotal row at the end of the table
+        // Adding the subtotal row at the end of the table
         tableHTML += `
             <tr>
                 <td colspan="4" class="text-right"><strong>Subtotal:</strong></td>
                 <td><strong>R ${subtotal.toFixed(2)}</strong></td>
-            </tr>
-        `;
+                </tr>
+                `;
 
         tableHTML += `</table>`;
-        checkoutContainer.innerHTML = tableHTML;
-    } else {
-        checkoutContainer.innerHTML = 'Your cart is empty.';
-    }
+          // Add a checkout button below the table
+          tableHTML += `
+          <div class="checkout-button-container">
+          <button id="checkout-button1" class="btn5">Proceed to Checkout</button>
+          <td colspan="6" class="text-center">
+         <button id="continue-shopping" class="btn">Continue Shopping</button>
+     </td>
+          </div>
+      `;
 
-    attachEventListeners();
+      checkoutContainer.innerHTML = tableHTML;
+
+      // Attaching event listeners to quantity inputs, remove buttons, and checkout button
+      attachEventListeners();
+
+      document.getElementById('continue-shopping').addEventListener('click', function() {
+        window.location.href = './product.html'; 
+    });
+    
+    // Attaching event listener to the checkout button
+    document.getElementById('checkout-button1').addEventListener('click', function() {
+        window.location.href = './payments.html'; 
+    });
+  } else {
+      checkoutContainer.innerHTML = 'Your cart is empty.';
+  }
 }
 
 
@@ -111,6 +131,28 @@ function removeItem(itemId) {
 
 // Call the render function on page load
 document.addEventListener('DOMContentLoaded', renderCheckoutTable);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

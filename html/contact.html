@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+    <header>
+        <img id="logo" class=".navbar-brand"
+        src="https://raw.githubusercontent.com/Nikilitha26/hostedImagesEndOfModule/main/Screenshot%202024-06-10%20103100.png"
+        alt="Company Logo" width="300" height="150">
+        
+    </header>
 <style>
 
- body{
-    height: 10px;
-    }
+
 #contacts{
     font-size: 35px; 
-    color: #D4AF37;
+    color:  #D4AF37;
     position: relative;
-    left: 130px;
-    bottom: 200px;
+    bottom: 195px;
+    right: 520px;
 }
-#h6{
-    font-style: italic;
-    color: white;
-}
-.bg-image1 {
-    background-image: url('https://nikilitha26.github.io/Boot-img/Image/OIP.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 260vh;
-}
-#icon{
-    width: 80px; 
-    height: 80px; 
-    margin-right: 150px;
-}
-#icon2{
-    width: 80px; 
-    height: 80px; 
-    margin-left:150px ;
-}
+
 #row{
     margin-left: 150px;
+}
+
+.col{
+    position: relative;
+    top: 50px;
+    left: 90px;
 }
 #pic1{
     height: 80px;
     width: 60px;
     position: relative;
-    bottom: 90px;
+    bottom: 120px;
+    left: 30px;
 }
 #pic2{
     height: 50px;
     width: 60px;
     position: relative;
     bottom: 105px;
-    left: 10px;
+    left: 37px;
 }
 #pic3{
     width: 60px;
     height: 70px;
     position: relative;
-    bottom: 120px;
-    left: 10px;
+    bottom: 90px;
+    left: 35px;
 }
 
 
@@ -68,63 +61,46 @@
     height: 70px;
     width: 70px;
     position: relative;
-    bottom: 140px;
-    left: 5px;
+    bottom: 78px;
+    left: 29px;
 }
 #pic6{
     height: 1px;
 }
 #forms{
     font-style: italic;
-}
-button{
-    background: #BC7FCD;
-}
-#back{
-    background-size: cover;
-}
-.thebuttons{
-    display: flex;
-    justify-content: space-around;
-  }
-  #btn{
-    background-color: #BC7FCD;
     color: white;
-  }
-  #copy{
-    margin-top: 7px; 
-    align-content: center;
-    color: black;
-  }
+}
+
   
   #pe1{
     position: relative;
     left: 90px;
-    bottom: 160px;
+    bottom: 120px;
     color: #D4AF37;
   }
   #pe2{
     position: relative;
     left: 90px;
-    bottom: 160px;
+    bottom: 105px;
     color: #D4AF37;
   }
   #pe3{
     position: relative;
-    left: 100px;
-    bottom: 190px;
+    left: 93px;
+    bottom: 85px;
     color: #D4AF37;
   }
   #pe5{
     position: relative;
-    left: 100px;
-    bottom: 210px;
+    left: 83px;
+    bottom: 70px;
     color: #D4AF37;
   }
   #form{
     position: relative;
-    left: 700px;
-    bottom: 550px;
+    /* left: 700px; */
+   bottom: 130px;
   }
 .form-label{
     font-size: 25px;
@@ -133,14 +109,23 @@ button{
 }
 .form-control{
     width: 400px;
-    height: 30px;
+    height: 50px;
     background-color: black;
     color: #D4AF37;
 }
-::placeholder {
+.form-control::placeholder{
   color: #D4AF37;
-  
 }
+
+.form-control:hover{
+  background-color: black;
+  color: #D4AF37;
+}
+
+input.form-control{
+  color: #D4AF37;
+}
+
 #btn{
     background-color: #D4AF37;
     border: none;
@@ -152,35 +137,56 @@ button{
     border-radius: 8px;
 }
 
+#btn:hover{
+    background-color: white;
+    color: #D4AF37;
+}
+
+.questios{
+  position: relative;
+  bottom: 190px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+#col{
+  position: relative;
+  top: 90px;
+}
 </style>
 
 
 
 
-    <header>
-        <img id="logo" class=".navbar-brand"
-        src="https://raw.githubusercontent.com/Nikilitha26/hostedImagesEndOfModule/main/Screenshot%202024-06-10%20103100.png"
-        alt="Company Logo" width="300" height="150">
-        
-</header>
-<nav id="nav">
-    <a href="./index.html">Home</a>
-    <a href="./about.html">About</a>
-    <a href="./product.html">Products</a>
-    <a href="./admin.html">Admin</a>
-    <a href="./checkout.html"><img id="cart"
-            src="https://github.com/Nikilitha26/hostedImagesEndOfModule/blob/main/Screenshot_2024-06-10_104711-removebg-preview.png?raw=true"
-            alt=""></a>
-            <a href="./contact.html">Contact</a>
-           
-           
-        </nav>
+<ul id="nav" class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./product.html">Products</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./admin.html">Admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./checkout.html"><img id="cart"
+      src="https://github.com/Nikilitha26/hostedImagesEndOfModule/blob/main/Screenshot_2024-06-10_104711-removebg-preview.png?raw=true"
+      alt=""></a>
+  </li>
+  <li class="nav-item">
+    <a id="bg" class="nav-link active" aria-current="page" href="./contact.html">Contacts</a>
+  </li>
+</ul>
+  </ul>
 
         <h1> <img id="title1" src="https://github.com/Nikilitha26/hostedImagesEndOfModule/blob/main/Screenshot_2024-06-11_095401-removebg-preview.png?raw=true" alt=""> </h1>
 
 <h2 id="contacts" class="text-center">CONTACTS</h2>
        <div class="row">
-        <div class="col">
+        <div id="col" class="col">
 
             <div  id="pics" class="d-flex align-items-center">
                 <img  id="pic1" src="https://raw.githubusercontent.com/Nikilitha26/hostedImagesEndOfModule/e5e96cad2bf2012951ae147117657fb619a82f12/7ab4ecb0e584f36bd0285636e2272c2a-removebg-preview.png" alt="Image 1 ">
@@ -203,6 +209,8 @@ button{
         </div>
 
         <div class="col">
+          <h2 class="questios">ANY QUESTIONS?</h2>
+
             <form id="form" class="myfoot">
                 <div class="mb-3" >
                   <label for="exampleInputEmail1" class="form-label">First name:</label> <br>
@@ -223,19 +231,21 @@ button{
                 </div>
                 <button id="btn" type="submit" class="btn btn-primary" >Submit</button>
               </form>
-
+              <div id="message-sent" style="display: none;">Message sent!</div>
         </div>
    
            </div>
 
     
         
-    <footer>
-        <div class="container">
-            <p>Copyright © Niki's Flex Fit 2024 Company. All rights reserved.</p>
-        </div>
-    </footer>
+           <footer class="foot">
+            <div class="container">
+                <p>Copyright © Niki's Flex Fit 2024 Company. All rights reserved.</p>
+    
+            </div>
+        </footer>
 
-    <script src="contact.js"></script>
+    <script src="/EndOfModuleProject/script/contacts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

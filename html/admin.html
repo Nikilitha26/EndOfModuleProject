@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <img id="logo"
+    src="https://raw.githubusercontent.com/Nikilitha26/hostedImagesEndOfModule/main/Screenshot%202024-06-10%20103100.png"
+    alt="Company Logo" width="300" height="150">
   </head>
 </head>
 <body>
-    <header>
-        <img id="logo"
-        src="https://raw.githubusercontent.com/Nikilitha26/hostedImagesEndOfModule/main/Screenshot%202024-06-10%20103100.png"
-        alt="Company Logo" width="300" height="150">
-</header>
-<nav id="nav">
-    <a href="./index.html">Home</a>
-    <a href="./about.html">About</a>
-    <a href="./product.html">Products</a>
-    <a href="./admin.html">Admin</a>
-    <a href="./checkout.html"><img id="cart"
+   
+    <ul id="nav" class="nav justify-content-end">
+        <li class="nav-item">
+          <a  class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a id="bg" class="nav-link active" aria-current="page" href="./admin.html">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./checkout.html"><img id="cart"
             src="https://github.com/Nikilitha26/hostedImagesEndOfModule/blob/main/Screenshot_2024-06-10_104711-removebg-preview.png?raw=true"
             alt=""></a>
-            <a href="./contact.html">Contact</a>
-        </nav>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contacts</a>
+        </li>
+      </ul>
         
 <h1> <img id="title1" src="https://github.com/Nikilitha26/hostedImagesEndOfModule/blob/main/Screenshot_2024-06-11_095401-removebg-preview.png?raw=true" alt=""> </h1>
 
@@ -31,7 +42,7 @@
 <!-- Button trigger modal -->
 <!-- Button to trigger the modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
+   Add Items
 </button>
 
 <!-- Modal -->
@@ -55,13 +66,14 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="closse" type="button" class="btn" data-bs-dismiss="modal">Close</button>
                 <button id="addProductButton" type="button" class="btn btn-primary">Add item</button>
                 <button id="clearInputsButton" type="button" class="btn btn-primary">Clear Inputs</button>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
@@ -73,14 +85,30 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
-            <th scope="col"></th>
+
         </tr>
     </thead>
   
+    <tbody class="tbody">
+        <!-- Items will go here -->
+    </tbody>
 
 
-    <script src="admin.js"></script>
+    <footer>
+        <div class="container">
+            <p>Copyright © Niki's Flex Fit 2024 Company. All rights reserved.</p>
+            <ul>
+                <li>about</li>
+            </ul>
+            
+        </div>
+
+        
+  
+
+    </footer>
+
+    <script src="/EndOfModuleProject/script/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
